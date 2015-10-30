@@ -16,7 +16,7 @@ def parse_date(date):
 def read_config():
     """ reads the config-file """
     directory = os.path.dirname(__file__)
-    filename = os.path.join(directory, './config.json')
+    filename = os.path.join(directory, 'config.json')
     with open(filename) as configfile:
         data = json.loads(configfile.read())
     return data

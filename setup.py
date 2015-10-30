@@ -36,6 +36,7 @@ setup(
     package_dir={'syspower':
                  'syspower'},
     include_package_data=True,
+    package_data={'':['*.json']},
     install_requires=requirements,
     license="ISCL",
     zip_safe=False,
