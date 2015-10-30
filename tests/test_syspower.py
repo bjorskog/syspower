@@ -16,14 +16,17 @@ from syspower import syspower
 class TestSyspower(unittest.TestCase):
 
     def setUp(self):
-        pass
+        self.client = syspower.Client()
 
     def tearDown(self):
         pass
 
-    def test_client(self):
-        client = syspower.Client()
-        data = client.get_series("SPOT", "d", "d", "hour")
+    def test_get_series(self):
+        data = self.client.get_series("SPOT", "d", "d", "hour")
+        print data
+
+    def test_get_series_no_timestamp(self):
+        data = self.client.get_series("SPOT", "d", "d", "hour", False)
         print data
 
 if __name__ == '__main__':

@@ -17,4 +17,7 @@ A package to manage data from Syspower.
 Features
 --------
 
-* TODO
+* Builds the URI needed to get data.
+* Reads the web-page and parses all data.
+* Returns the data as a pandas dataframe
+* Rename config_example.json to config.json, and replace the details.
